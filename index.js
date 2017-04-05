@@ -38,7 +38,7 @@ app.post('/sendemailp', function(req, res) {
 
   let mailOptions = {
     from: mailuser, // sender address
-    to: 'administrator@skillpier.com', // list of receivers
+    to: 'administrator@skillpier.com,zhuyi8319@163.com', // list of receivers
     subject: 'Hello Zack test', // Subject line
     text: req.body.firstname + "#" + req.body.lastname, // plain text body
     html: req.params.info // html body
