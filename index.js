@@ -1,6 +1,6 @@
 var express = require('express')
 var app = express()
-
+var path = require('path');
 var bodyParser = require('body-parser')
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -23,7 +23,10 @@ let transporter = nodemailer.createTransport({
 
 // setup email data with unicode symbols
 
-
+app.use('/skillpier-action_files', express.static(path.join(__dirname + '/skillpier-action_files')))
+app.get('/', function(req, res) {
+    res.sendfile('./skillpier-action.htm');
+});
 
 
 app.get('/sendemail/:info', function (req, res) {
