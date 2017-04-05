@@ -12,10 +12,10 @@ const nodemailer = require('nodemailer');
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'qq',
     auth: {
-        user: 'zhuyi8319@gmail.com',
-        pass: '5223637'
+        user: '36757049@qq.com',
+        pass: 'dubvdakbmrmkcbac'
     }
 });
 
@@ -29,9 +29,9 @@ app.get('/sendemail/:info', function (req, res) {
 console.log("info = ", req.params.info);
 
 let mailOptions = {
-    from: 'zhuyi8319@gmail.com', // sender address
+    from: '36757049@qq.com', // sender address
     to: 'zhuyiif@gmail.com', // list of receivers
-    subject: 'Hello ✔', // Subject line
+    subject: 'Hello', // Subject line
     text: req.params.info, // plain text body
     html: req.params.info // html body
 };
@@ -52,9 +52,9 @@ app.post('/sendemailp', function(req, res) {
  
 
   let mailOptions = {
-    from: 'zhuyi8319@gmail.com', // sender address
+    from: '36757049@qq.com', // sender address
     to: 'zhuyiif@gmail.com', // list of receivers
-    subject: 'Hello ✔', // Subject line
+    subject: 'Hello Zack test', // Subject line
     text: req.body.firstname + "#" + req.body.lastname, // plain text body
     html: req.params.info // html body
 };
