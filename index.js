@@ -26,7 +26,7 @@ let transporter = nodemailer.createTransport({
 app.use('/skillpier-action_files', express.static(path.join(__dirname + '/skillpier-action_files')))
 app.get('/', function(req, res) {
     //res.sendfile('./skillpier-action.htm');
-    res.sendFile(path.join(__dirname, '/', 'skillpier-action.htm'));
+    res.sendFile(path.join(__dirname, '/', 'skillpier-pingpong.html'));
 });
 
 

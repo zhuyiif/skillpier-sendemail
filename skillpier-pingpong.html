@@ -2,6 +2,7 @@
 <html>
 <title>Skillopedia乒乓球活动</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -142,13 +143,18 @@ body {font-family: "Roboto", sans-serif}
 <p>
 <div class="form-style-6">
 <h1>Contact Us</h1>
-<form action="http://www.skillpier.net/sendemailp" method="get">
-<input type="text" id="firstname" name="firstname" placeholder="Your Name" />
-<input type="number" id="lastname" name="lastname" placeholder="Your phone" />
+<form id="myform" action="http://localhost:9876/sendemailp" method="get">
+<input type="text" id="firstname" name="firstname" placeholder="Your Name" required/>
+<input type="number" id="lastname" name="lastname" placeholder="Your phone" required/>
 
 <input type="submit" value="Send" />
 </form>
 </div>
+
+<div id="response" class="w3-container w3-sand w3-leftbar">
+
+</div>
+
 <p>
 
 <script>
@@ -162,30 +168,28 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 
-// Change style of top container on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
-        document.getElementById("myIntro").classList.add("w3-show-inline-block");
-    } else {
-        document.getElementById("myIntro").classList.remove("w3-show-inline-block");
-        document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
-    }
-}
 
-// Accordions
-function myAccordion(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-theme";
-    } else { 
-        x.className = x.className.replace("w3-show", "");
-        x.previousElementSibling.className = 
-        x.previousElementSibling.className.replace(" w3-theme", "");
-    }
-}
+
+
+
+$(function() {
+                $("#myform").on("submit", function(e) {
+                    e.preventDefault();
+                    $.ajax({
+                        url: $(this).attr("action"),
+                        type: 'GET',
+                        data: $(this).serialize(),
+                    
+                        success: function(data) {
+                            $("#message").hide();
+                            $("#response").html("提交成功");
+
+                            alert("提交成功");
+                        }
+                    });
+                });
+            });
+
 </script>
      
 </body>
