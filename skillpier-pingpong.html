@@ -2,7 +2,7 @@
 <html>
 <title>Experience Free Private Table Tennis Lesson </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta charset="UTF-8">
+<meta charset="UTF-8">
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
@@ -220,8 +220,8 @@
                     <div class="form-style-6">
                         <h1>Registration</h1>
                         <form id="myform" action="http://www.skillpier.net/sendemailp" method="get">
-                            <input type="text" id="firstname" name="firstname" placeholder="Your Name" required/>
-                            <input type="number" id="lastname" name="lastname" placeholder="Your phone" required/>
+                            <input type="text" id="firstname1" name="firstname" placeholder="Your Name" required/>
+                            <input type="number" id="lastname1" name="lastname" placeholder="Your phone" required/>
 
                             <input type="submit" value="Send" />
                         </form>
@@ -277,6 +277,22 @@
                                 document.getElementById("myOverlay").style.display = "none";
                             }
 
+                            $("#pay_form").submit(function (event) {
+
+                                var iteminfo = $("#firstname1").val() + '#' + $("#lastname1").val();
+                                console.log('info = ' + iteminfo);
+
+                                $('input[name="item_number"]').val(iteminfo);
+
+
+                                var geturl = 'http://www.skillpier.net/sendemailp?firstname=' + $("#firstname1").val() + '&lastname=' + $("#lastname1").val();
+
+                                $.get('http://www.skillpier.net/sendemailp?firstname=zackzhu&lastname=112233', function (data) {
+
+                                    alert("Data Loaded: " + data);
+                                });
+
+                            });
 
 
 

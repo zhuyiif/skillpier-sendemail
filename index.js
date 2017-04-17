@@ -1,4 +1,6 @@
 var express = require('express')
+var cors = require('cors');
+
 var app = express()
 var path = require('path');
 var bodyParser = require('body-parser')
@@ -7,7 +9,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
-
+app.use(cors());
 const nodemailer = require('nodemailer');
 
 var mailuser="zhuyiskillpier@gmail.com"
