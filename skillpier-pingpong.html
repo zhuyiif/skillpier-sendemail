@@ -1,270 +1,324 @@
 <!DOCTYPE html>
 <html>
-<title>Experience Free Private Table Tennis Lesson    </title>
+<title>Experience Free Private Table Tennis Lesson </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="UTF-8">
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
-body {font-family: "Roboto", sans-serif}
-.w3-bar-block .w3-bar-item{padding:16px;font-weight:bold}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: "Roboto", sans-serif
+    }
+    
+    .w3-bar-block .w3-bar-item {
+        padding: 16px;
+        font-weight: bold
+    }
 </style>
 
 <style type="text/css">
-.form-style-6{
-    font: 95% Arial, Helvetica, sans-serif;
-    max-width: 400px;
-    margin: 10px auto;
-    padding: 16px;
-    background: #F7F7F7;
-}
-.form-style-6 h1{
-    background: #43D1AF;
-    padding: 20px 0;
-    font-size: 140%;
-    font-weight: 300;
-    text-align: center;
-    color: #fff;
-    margin: -16px -16px 16px -16px;
-}
-.form-style-6 input[type="text"],
-.form-style-6 input[type="date"],
-.form-style-6 input[type="datetime"],
-.form-style-6 input[type="email"],
-.form-style-6 input[type="number"],
-.form-style-6 input[type="search"],
-.form-style-6 input[type="time"],
-.form-style-6 input[type="url"],
-.form-style-6 textarea,
-.form-style-6 select 
-{
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    outline: none;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 100%;
-    background: #fff;
-    margin-bottom: 4%;
-    border: 1px solid #ccc;
-    padding: 3%;
-    color: #555;
-    font: 95% Arial, Helvetica, sans-serif;
-}
-.form-style-6 input[type="text"]:focus,
-.form-style-6 input[type="date"]:focus,
-.form-style-6 input[type="datetime"]:focus,
-.form-style-6 input[type="email"]:focus,
-.form-style-6 input[type="number"]:focus,
-.form-style-6 input[type="search"]:focus,
-.form-style-6 input[type="time"]:focus,
-.form-style-6 input[type="url"]:focus,
-.form-style-6 textarea:focus,
-.form-style-6 select:focus
-{
-    box-shadow: 0 0 5px #43D1AF;
-    padding: 3%;
-    border: 1px solid #43D1AF;
-}
-
-.form-style-6 input[type="submit"],
-.form-style-6 input[type="button"]{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 100%;
-    padding: 3%;
-    background: #43D1AF;
-    border-bottom: 2px solid #30C29E;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;    
-    color: #fff;
-}
-.form-style-6 input[type="submit"]:hover,
-.form-style-6 input[type="button"]:hover{
-    background: #2EBC99;
-}
-
-.entext{
-color:#006200;
-}
-
-.coImage {
-width:100%;
-margin: auto;
-max-width: 600px;
-}
-
+    .form-style-6 {
+        font: 95% Arial, Helvetica, sans-serif;
+        max-width: 400px;
+        margin: 10px auto;
+        padding: 16px;
+        background: #F7F7F7;
+    }
+    
+    .form-style-6 h1 {
+        background: #43D1AF;
+        padding: 20px 0;
+        font-size: 140%;
+        font-weight: 300;
+        text-align: center;
+        color: #fff;
+        margin: -16px -16px 16px -16px;
+    }
+    
+    .form-style-6 input[type="text"],
+    .form-style-6 input[type="date"],
+    .form-style-6 input[type="datetime"],
+    .form-style-6 input[type="email"],
+    .form-style-6 input[type="number"],
+    .form-style-6 input[type="search"],
+    .form-style-6 input[type="time"],
+    .form-style-6 input[type="url"],
+    .form-style-6 textarea,
+    .form-style-6 select {
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: none;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        background: #fff;
+        margin-bottom: 4%;
+        border: 1px solid #ccc;
+        padding: 3%;
+        color: #555;
+        font: 95% Arial, Helvetica, sans-serif;
+    }
+    
+    .form-style-6 input[type="text"]:focus,
+    .form-style-6 input[type="date"]:focus,
+    .form-style-6 input[type="datetime"]:focus,
+    .form-style-6 input[type="email"]:focus,
+    .form-style-6 input[type="number"]:focus,
+    .form-style-6 input[type="search"]:focus,
+    .form-style-6 input[type="time"]:focus,
+    .form-style-6 input[type="url"]:focus,
+    .form-style-6 textarea:focus,
+    .form-style-6 select:focus {
+        box-shadow: 0 0 5px #43D1AF;
+        padding: 3%;
+        border: 1px solid #43D1AF;
+    }
+    
+    .form-style-6 input[type="submit"],
+    .form-style-6 input[type="button"] {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        padding: 3%;
+        background: #43D1AF;
+        border-bottom: 2px solid #30C29E;
+        border-top-style: none;
+        border-right-style: none;
+        border-left-style: none;
+        color: #fff;
+    }
+    
+    .form-style-6 input[type="submit"]:hover,
+    .form-style-6 input[type="button"]:hover {
+        background: #2EBC99;
+    }
+    
+    .entext {
+        color: #006200;
+    }
+    
+    .coImage {
+        width: 100%;
+        margin: auto;
+        max-width: 600px;
+    }
 </style>
+
 <body>
-  
-
-<header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
-  <h1 class="w3-xxxlarge w3-padding-16">Experience Free Private Table Tennis Lesson  </h1>
-</header>
-
-<div class="w3-container w3-padding-32" style="padding-left:32px">
-
-<h2>Skillpier</h2>
-
-<p>      Skillpier is a O2O platform that focuses on private lessons. Our platform includes a wide selection of skills to choose, varying from Sports to Art. Our platform allows users to find the best coach near them. With Skillpier, the only thing you need to do is enjoy the lesson with our certified coaches.
-</p>
-
-<p>
-      Since we launched last month, thousands of users joined our website. This large network of users allows a connection to be built between the Coaches and our Users. During this activity, you will train and play with the most excellent coaches in LA area.
-</p>
 
 
+    <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
+        <h1 class="w3-xxxlarge w3-padding-16">Experience Free Private Table Tennis Lesson </h1>
+    </header>
 
-  
-    <p>Lucky Draw</p>
-  <ul class="w3-ul w3-card-4" style="width:70%">
-    <li> First Prize, Table tennis paddle</li>
-    <li >Second Prize, Hurricane 3 Rubber</li>
-    <li>Third Prize, NITTAKU 40+ PREMIUM Ball</li>
-  </ul>
+    <div class="w3-container w3-padding-32" style="padding-left:32px">
 
+        <h2>Skillpier</h2>
 
-<div class="w3-panel w3-pale-green">
-  <p>Activity Address ：10180 Valley Blvd, El Monte, CA 91731.</p>
-</div>
+        <p> Skillpier is a O2O platform that focuses on private lessons. Our platform includes a wide selection of skills to
+            choose, varying from Sports to Art. Our platform allows users to find the best coach near them. With Skillpier,
+            the only thing you need to do is enjoy the lesson with our certified coaches.
+        </p>
 
-
-<p>
-<div class="form-style-6">
-<h1>Registration</h1>
-<form id="myform1" action="http://www.skillpier.net/sendemailp" method="get">
-<input type="text" id="firstname" name="firstname" placeholder="Your Name" required/>
-<input type="number" id="lastname" name="lastname" placeholder="Your phone" required/>
-
-<input type="submit" value="Send" />
-</form>
-</div>
-
-<div id="response1" class="w3-container w3-sand w3-leftbar">
-
-</div>
-
-<p>
+        <p>
+            Since we launched last month, thousands of users joined our website. This large network of users allows a connection to be
+            built between the Coaches and our Users. During this activity, you will train and play with the most excellent
+            coaches in LA area.
+        </p>
 
 
 
 
-
-<h2> Coach team introduction(more joining)</h2>
-
-<img src="http://www.skillpier.net/skillpier-action_files/image001.jpg" class="coImage" alt="Responsive">
-
-<h2>Justin Huang</h2>
-<div class="w3-container w3-sand w3-leftbar">
-<p> The best Pen-Hold player in South California area, former Guangdong Provincial team member, his forehand loop is very fast and stable. his Pen-Hold backhand is also incredible powerful. If you want a real challenge for anyone playing or teaching you, then he is the perfect coach for you.</p>
-</div>
-
-<hr>
-<img src="http://www.skillpier.net/skillpier-action_files/image003.jpg" class="coImage" alt="Responsive">
-
-<h2>Serena He</h2>
-<div class="w3-container w3-sand w3-leftbar">
-<p>      former GD provincial team member, play aggressive in closed table. Serena’s forehand is very fast and stable, backhand tips is never easy for anyone to handle Me:
-     If you want a real challenge for anyone playing or teaching you, then I am the perfect coach for you.
-</p>
+        <p>Lucky Draw</p>
+        <ul class="w3-ul w3-card-4" style="width:70%">
+            <li> First Prize, Table tennis paddle</li>
+            <li>Second Prize, Hurricane 3 Rubber</li>
+            <li>Third Prize, NITTAKU 40+ PREMIUM Ball</li>
+        </ul>
 
 
-</div>
-
-<hr>
-<img src="http://www.skillpier.net/skillpier-action_files/image005.jpg" class="coImage" alt="Responsive">
-
-<h2>Coffer Lu</h2>
-<div class="w3-container w3-sand w3-leftbar">
-<p>Coffer Lu was trained at Weilun School, one of the best athlete schools in China. Coffer is a very offensive left hand player, his backhand loop is fast and stable. While his forehand loop is extremely powerful. If you want to learn advanced close table technique, Coffer is your best choice.</p>
+        <div class="w3-panel w3-pale-green">
+            <p>Activity Address : 10180 Valley Blvd, El Monte, CA 91731.</p>
+        </div>
 
 
-</div>
+        <p>
+            <div class="form-style-6">
+                <h1>Registration</h1>
+                <form id="myform1" action="http://www.skillpier.net/sendemailp" method="get">
+                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" required/>
+                    <input type="number" id="lastname" name="lastname" placeholder="Your phone" required/>
 
-<br>
+                    <input type="submit" value="Send" />
+                </form>
+            </div>
+
+            <div id="response1" class="w3-container w3-sand w3-leftbar">
+
+            </div>
 
 
-<div class="w3-panel w3-pale-green">
-  <p>Activity Address ：10180 Valley Blvd, El Monte, CA 91731.</p>
-</div>
 
-
-<p>
-<div class="form-style-6">
-<h1>Registration</h1>
-<form id="myform" action="http://www.skillpier.net/sendemailp" method="get">
-<input type="text" id="firstname" name="firstname" placeholder="Your Name" required/>
-<input type="number" id="lastname" name="lastname" placeholder="Your phone" required/>
-
-<input type="submit" value="Send" />
-</form>
-</div>
-
-<div id="response" class="w3-container w3-sand w3-leftbar">
-
-</div>
-
-<p>
-
-<script>
-// Open and close the sidebar on medium and small screens
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
+            <p>
 
 
 
 
 
-$(function() {
-                $("#myform").on("submit", function(e) {
-                    e.preventDefault();
-                    $.ajax({
-                        url: $(this).attr("action"),
-                        type: 'GET',
-                        data: $(this).serialize(),
-                    
-                        success: function(data) {
-                            $("#message").hide();
-                            $("#response").html("Your information has been successfully submitted!");
+                <h2> Coach team introduction(more joining)</h2>
 
-                            alert("Your information has been successfully submitted!");
-                        }
-                    });
-                });
-            });
+                <img src="http://www.skillpier.net/skillpier-action_files/image001.jpg" class="coImage" alt="Responsive">
+
+                <h2>Justin Huang</h2>
+                <div class="w3-container w3-sand w3-leftbar">
+                    <p> The best Pen-Hold player in South California area, former Guangdong Provincial team member, his forehand
+                        loop is very fast and stable. his Pen-Hold backhand is also incredible powerful. If you want a real
+                        challenge for anyone playing or teaching you, then he is the perfect coach for you.</p>
+                </div>
+
+                <hr>
+                <img src="http://www.skillpier.net/skillpier-action_files/image003.jpg" class="coImage" alt="Responsive">
+
+                <h2>Serena He</h2>
+                <div class="w3-container w3-sand w3-leftbar">
+                    <p> former GD provincial team member, play aggressive in closed table. Serena’s forehand is very fast and
+                        stable, backhand tips is never easy for anyone to handle Me: If you want a real challenge for anyone
+                        playing or teaching you, then I am the perfect coach for you.
+                    </p>
 
 
-            $(function() {
-                $("#myform1").on("submit", function(e) {
-                    e.preventDefault();
-                    $.ajax({
-                        url: $(this).attr("action"),
-                        type: 'GET',
-                        data: $(this).serialize(),
-                    
-                        success: function(data) {
-                            $("#message").hide();
-                            $("#response1").html("Your information has been successfully submitted!");
+                </div>
 
-                            alert("Your information has been successfully submitted!");
-                        }
-                    });
-                });
-            });
+                <hr>
+                <img src="http://www.skillpier.net/skillpier-action_files/image005.jpg" class="coImage" alt="Responsive">
 
-</script>
-     
+                <h2>Coffer Lu</h2>
+                <div class="w3-container w3-sand w3-leftbar">
+                    <p>Coffer Lu was trained at Weilun School, one of the best athlete schools in China. Coffer is a very offensive
+                        left hand player, his backhand loop is fast and stable. While his forehand loop is extremely powerful.
+                        If you want to learn advanced close table technique, Coffer is your best choice.</p>
+
+
+                </div>
+
+                <br>
+
+
+                <div class="w3-panel w3-pale-green">
+                    <p>Activity Address : 10180 Valley Blvd, El Monte, CA 91731.</p>
+                </div>
+
+
+                <p>
+                    <div class="form-style-6">
+                        <h1>Registration</h1>
+                        <form id="myform" action="http://www.skillpier.net/sendemailp" method="get">
+                            <input type="text" id="firstname" name="firstname" placeholder="Your Name" required/>
+                            <input type="number" id="lastname" name="lastname" placeholder="Your phone" required/>
+
+                            <input type="submit" value="Send" />
+                        </form>
+                    </div>
+
+                    <div id="response" class="w3-container w3-sand w3-leftbar">
+
+                    </div>
+
+                    <!-- paypal -->
+                    <div class="paypal">
+                        <!--  <form name="paypalForm" action="https://www.paypal.com/cgibin/webscr" method="post"> -->
+                        <!-- paypal沙盒支付测试地址 -->
+                        <form id="pay_form" name="paypalForm" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                            <!-- Payment amount-->
+                            <input type="hidden" name="amount" value="5">
+                            <!-- 自己的参数 商品条目-->
+                            <input type="hidden" name="item_number" id="item_number" value="pingpong activities">
+                            <!-- 表示立即支付-->
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <!-- 商品名称-->
+                            <input type="hidden" name="skillpier_pingpong_activities" id="123" value="skillpier_pingpong">
+                            <!-- 商户订单唯一id 不可重复 -->
+                            <!--
+            <input type="hidden" name="invoice" id="invoice" value="201604291655176">
+            System.currentTimeMillis()
+             -->
+                            <input type="hidden" name="invoice" value="{{id}}">
+                            <!--支付成功后台通知地址-->
+                            <input type="hidden" name="notify_url" id="notify_url" value="https://www.skillpier.com/PaypalNotify">
+                            <!--支付成功返回地址-->
+                            <input type="hidden" name="return" id="return" value="http://www.skillpier.net/">
+                            <input type="hidden" name="lc" value="US">
+                            <!--支付取消返回地址-->
+                            <input type="hidden" name="cancel_return" id="cancel_return" value="http://www.skillpier.net/">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <!--商户邮件-->
+                            <input type="hidden" name="business" value="administrator@skillpier.com">
+                            <input type="image" src="./images/paypal.png" border="0" name="submit" alt="Make payments with PayPal it's st, free and secure!">
+                        </form>
+                    </div>
+
+                    <p>
+
+                        <script>
+                            // Open and close the sidebar on medium and small screens
+                            function w3_open() {
+                                document.getElementById("mySidebar").style.display = "block";
+                                document.getElementById("myOverlay").style.display = "block";
+                            }
+                            function w3_close() {
+                                document.getElementById("mySidebar").style.display = "none";
+                                document.getElementById("myOverlay").style.display = "none";
+                            }
+
+
+
+
+
+                            $(function () {
+                                $("#myform").on("submit", function (e) {
+                                    e.preventDefault();
+                                    $.ajax({
+                                        url: $(this).attr("action"),
+                                        type: 'GET',
+                                        data: $(this).serialize(),
+
+                                        success: function (data) {
+                                            $("#message").hide();
+                                            $("#response").html("Your information has been successfully submitted!");
+
+                                            alert("Your information has been successfully submitted!");
+                                        }
+                                    });
+                                });
+                            });
+
+
+                            $(function () {
+                                $("#myform1").on("submit", function (e) {
+                                    e.preventDefault();
+                                    $.ajax({
+                                        url: $(this).attr("action"),
+                                        type: 'GET',
+                                        data: $(this).serialize(),
+
+                                        success: function (data) {
+                                            $("#message").hide();
+                                            $("#response1").html("Your information has been successfully submitted!");
+
+                                            alert("Your information has been successfully submitted!");
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+
 </body>
-</html> 
+
+</html>

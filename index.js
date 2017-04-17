@@ -24,6 +24,7 @@ let transporter = nodemailer.createTransport({
 // setup email data with unicode symbols
 
 app.use('/skillpier-action_files', express.static(path.join(__dirname + '/skillpier-action_files')))
+app.use('/images', express.static(path.join(__dirname + '/images')))
 app.get('/', function(req, res) {
     //res.sendfile('./skillpier-action.htm');
     res.sendFile(path.join(__dirname, '/', 'skillpier-pingpong.html'));
