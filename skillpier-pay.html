@@ -156,7 +156,7 @@
                 <div class="list-group bg-white">
                     <div class="list-group-item" id="paypalItem">
 
-                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-circle-o" id="paypalcheck" aria-hidden="true"></i>
                         <img height="30px;" src="./images/paypal.png" style="vertical-align: middle;">
                     </div>
                     <div class="list-group-item hide" id="paypalInput">
@@ -166,13 +166,13 @@
                             <!-- paypal沙盒支付测试地址 -->
                             <form id="pay_form" name="paypalForm" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
                                 <!-- Payment amount-->
-                                <input type="hidden" name="amount" value="{{payment.total_total_session_rate}}">
+                                <input type="hidden" name="amount" value="5">
                                 <!-- 自己的参数 商品条目-->
-                                <input type="hidden" name="item_number" id="item_number" value="{{payment.course_titles}}">
+                                <input type="hidden" name="item_number" id="item_number" value="pingpong activities">
                                 <!-- 表示立即支付-->
                                 <input type="hidden" name="cmd" value="_xclick">
                                 <!-- 商品名称-->
-                                <input type="hidden" name="item_name" id="item_name" value="skillpier">
+                                <input type="hidden" name="skillpier_pingpong_activities" id="123" value="skillpier_pingpong">
                                 <!-- 商户订单唯一id 不可重复 -->
                                 <!--
             <input type="hidden" name="invoice" id="invoice" value="201604291655176">
@@ -182,10 +182,10 @@
                                 <!--支付成功后台通知地址-->
                                 <input type="hidden" name="notify_url" id="notify_url" value="https://www.skillpier.com/PaypalNotify">
                                 <!--支付成功返回地址-->
-                                <input type="hidden" name="return" id="return" value="https://www.skillpier.com/">
+                                <input type="hidden" name="return" id="return" value="http://www.skillpier.net/">
                                 <input type="hidden" name="lc" value="US">
                                 <!--支付取消返回地址-->
-                                <input type="hidden" name="cancel_return" id="cancel_return" value="https://www.skillpier.com/">
+                                <input type="hidden" name="cancel_return" id="cancel_return" value="http://www.skillpier.net/">
                                 <input type="hidden" name="currency_code" value="USD">
                                 <!--商户邮件-->
                                 <input type="hidden" name="business" value="administrator@skillpier.com">
@@ -194,11 +194,11 @@
                         </div>
                         <div>Click PayPal to complete your purchase</div>
                     </div>
-                    <div class="list-group-item" ng-click="select_payment('visa')">
-                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                    <div class="list-group-item hide" id="visaItem">
+                        <i class="fa fa-circle-o" id="visacheck" aria-hidden="true"></i>
                         <img height="30px;" src="./images/visa.jpg" style="vertical-align: middle;">
                     </div>
-                    <div class="list-group-item hide">
+                    <div class="list-group-item hide" id="visaInput">
                         <!-- visa pay -->
                         <form name="visaForm" ng-submit="ajaxForm()" class="visa-form clearfix">
                             <div class="visa-caret"></div>
@@ -229,7 +229,7 @@
                         </form>
                     </div>
                 </div>
-                <span class="hover" style="color: blue" ng-click="last_step()"> Back</span>
+
             </div>
 
         </div>
@@ -241,9 +241,26 @@
 
     <script>
         $("#paypalItem").click(function () {
-            alert("Handler for .click() called.");
+
+            $('#visaInput').addClass('hide');
+            $('#visacheck').addClass('fa-circle-o');
+            $('#visacheck').removeClass('fa-check-circle');
 
             $('#paypalInput').removeClass('hide');
+            $('#paypalcheck').removeClass('fa-circle-o');
+            $('#paypalcheck').addClass('fa-check-circle');
+        });
+
+        $("#visaItem").click(function () {
+
+            $('#paypalInput').addClass('hide');
+            $('#paypalcheck').addClass('fa-circle-o');
+            $('#paypalcheck').removeClass('fa-check-circle');
+
+
+            $('#visaInput').removeClass('hide');
+            $('#visacheck').removeClass('fa-circle-o');
+            $('#visacheck').addClass('fa-check-circle');
         });
 
         var LocString = String(window.document.location.href);
@@ -257,62 +274,16 @@
         }
 
         var name = getQueryStr("name");
-        $("#response").html("Your name:" + name);
+        var phone = getQueryStr("phone");
+        $("#response").html("Your name:" + name + " Your phone:" + phone);
+
         $("#pay_form").submit(function (event) {
 
-            var iteminfo = $("#firstname1").val() + '#' + $("#lastname1").val();
+            var iteminfo = name + '#' + phone;
             console.log('info = ' + iteminfo);
 
             $('input[name="item_number"]').val(iteminfo);
 
-
-            var geturl = 'http://www.skillpier.net/sendemailp?firstname=' + $("#firstname1").val() + '&lastname=' + $("#lastname1").val();
-
-            $.get('http://www.skillpier.net/sendemailp?firstname=zackzhu&lastname=112233', function (data) {
-
-                alert("Data Loaded: " + data);
-            });
-
-        });
-
-
-
-
-        $(function () {
-            $("#myform").on("submit", function (e) {
-                e.preventDefault();
-                $.ajax({
-                    url: $(this).attr("action"),
-                    type: 'GET',
-                    data: $(this).serialize(),
-
-                    success: function (data) {
-                        $("#message").hide();
-                        $("#response").html("Your information has been successfully submitted!");
-
-                        alert("Your information has been successfully submitted!");
-                    }
-                });
-            });
-        });
-
-
-        $(function () {
-            $("#myform1").on("submit", function (e) {
-                e.preventDefault();
-                $.ajax({
-                    url: $(this).attr("action"),
-                    type: 'GET',
-                    data: $(this).serialize(),
-
-                    success: function (data) {
-                        $("#message").hide();
-                        $("#response1").html("Your information has been successfully submitted!");
-
-                        alert("Your information has been successfully submitted!");
-                    }
-                });
-            });
         });
     </script>
 
