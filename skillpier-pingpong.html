@@ -219,7 +219,7 @@
                 <p>
                     <div class="form-style-6">
                         <h1>Registration</h1>
-                        <form id="myform" action="http://www.skillpier.net/sendemailp" method="get">
+                        <form id="myform" action="http://localhost:9876/sendemailp" method="get">
                             <input type="text" id="firstname1" name="firstname" placeholder="Your Name" required/>
                             <input type="number" id="lastname1" name="lastname" placeholder="Your phone" required/>
 
@@ -287,7 +287,7 @@
 
                                 var geturl = 'http://www.skillpier.net/sendemailp?firstname=' + $("#firstname1").val() + '&lastname=' + $("#lastname1").val();
 
-                                $.get('http://www.skillpier.net/sendemailp?firstname=zackzhu&lastname=112233', function (data) {
+                                $.get(geturl, function (data) {
 
                                     alert("Data Loaded: " + data);
                                 });
@@ -297,42 +297,42 @@
 
 
 
-                            $(function () {
-                                $("#myform").on("submit", function (e) {
-                                    e.preventDefault();
-                                    $.ajax({
-                                        url: $(this).attr("action"),
-                                        type: 'GET',
-                                        data: $(this).serialize(),
+                            // $(function () {
+                            //     $("#myform").on("submit", function (e) {
+                            //         e.preventDefault();
+                            //         $.ajax({
+                            //             url: $(this).attr("action"),
+                            //             type: 'GET',
+                            //             data: $(this).serialize(),
 
-                                        success: function (data) {
-                                            $("#message").hide();
-                                            $("#response").html("Your information has been successfully submitted!");
+                            //             success: function (data) {
+                            //                 $("#message").hide();
+                            //                 $("#response").html("Your information has been successfully submitted!");
 
-                                            alert("Your information has been successfully submitted!");
-                                        }
-                                    });
-                                });
-                            });
+                            //                 alert("Your information has been successfully submitted!");
+                            //             }
+                            //         });
+                            //     });
+                            // });
 
 
-                            $(function () {
-                                $("#myform1").on("submit", function (e) {
-                                    e.preventDefault();
-                                    $.ajax({
-                                        url: $(this).attr("action"),
-                                        type: 'GET',
-                                        data: $(this).serialize(),
+                            // $(function () {
+                            //     $("#myform1").on("submit", function (e) {
+                            //         e.preventDefault();
+                            //         $.ajax({
+                            //             url: $(this).attr("action"),
+                            //             type: 'GET',
+                            //             data: $(this).serialize(),
 
-                                        success: function (data) {
-                                            $("#message").hide();
-                                            $("#response1").html("Your information has been successfully submitted!");
+                            //             success: function (data) {
+                            //                 $("#message").hide();
+                            //                 $("#response1").html("Your information has been successfully submitted!");
 
-                                            alert("Your information has been successfully submitted!");
-                                        }
-                                    });
-                                });
-                            });
+                            //                 alert("Your information has been successfully submitted!");
+                            //             }
+                            //         });
+                            //     });
+                            // });
                         </script>
 
 </body>

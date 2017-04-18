@@ -26,11 +26,19 @@ let transporter = nodemailer.createTransport({
 // setup email data with unicode symbols
 
 app.use('/skillpier-action_files', express.static(path.join(__dirname + '/skillpier-action_files')))
+
+app.use('/app.min.css', express.static(path.join(__dirname + '/app.min.css')))
 app.use('/images', express.static(path.join(__dirname + '/images')))
 app.get('/', function(req, res) {
     //res.sendfile('./skillpier-action.htm');
     res.sendFile(path.join(__dirname, '/', 'skillpier-pingpong.html'));
 });
+
+
+app.get('/payment',function(req,res){
+  res.sendFile(path.join(__dirname, '/', 'skillpier-pay.html'));
+});
+
 
 
 app.get('/sendemail/:info', function (req, res) {
@@ -62,36 +70,14 @@ transporter.sendMail(mailOptions, (error, info) => {
     }
     console.log('Message %s sent: %s', info.messageId, info.response);
 
-     res.send('You sent the name ' + first + " last:" + last);
+   //  res.send('You sent the name ' + first + " last:" + last);
+   res.redirect('/payment?name='+first+'&'+'phone='+last);
 });
 
 
 });
 
 
-app.post('/sendemailp', function(req, res) {
- 
 
-  let mailOptions = {
-    from: mailuser, // sender address
-    to: 'administrator@skillpier.com,zhuyi8319@163.com', // list of receivers
-    subject: 'Hello Zack test', // Subject line
-    text: req.body.firstname + "#" + req.body.lastname, // plain text body
-    html: req.params.info // html body
-};
-
-// // send mail with defined transport object
-transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-        return console.log(error);
-    }
-    console.log('Message %s sent: %s', info.messageId, info.response);
-
-     res.send('You sent the name ' + req.body.firstname + " last:" + req.body.lastname);
-});
-
-
-
-});
 
 app.listen(9876)

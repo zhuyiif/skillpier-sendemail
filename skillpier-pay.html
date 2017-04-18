@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<title>Experience Free Private Table Tennis Lesson </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="//cdn.bootcss.com/normalize/4.1.1/normalize.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/pickadate.js/3.5.6/compressed/themes/classic.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/pickadate.js/3.5.6/compressed/themes/classic.date.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/textAngular/1.5.1/textAngular.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/rangeslider.js/2.2.1/rangeslider.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/angularjs-datepicker/2.1.6/angular-datepicker.min.css" rel="stylesheet">
+<script src="//cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+<script src="//cdn.bootcss.com/angular.js/1.5.5/angular.js"></script>
+<script src="//cdn.bootcss.com/angular.js/1.5.5/angular-route.js"></script>
+<script src="//cdn.bootcss.com/angular-sanitize/1.5.5/angular-sanitize.min.js"></script>
+<script src="//cdn.bootcss.com/angular-local-storage/0.2.7/angular-local-storage.js"></script>
+<script src="//cdn.bootcss.com/ng-flow/2.7.1/ng-flow-standalone.min.js"></script>
+<script src="//cdn.bootcss.com/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script src="//cdn.bootcss.com/pickadate.js/3.5.6/compressed/picker.js"></script>
+<script src="//cdn.bootcss.com/pickadate.js/3.5.6/compressed/picker.date.js"></script>
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+<script src="//cdn.bootcss.com/textAngular/1.5.1/textAngular-rangy.min.js"></script>
+<script src="//cdn.bootcss.com/textAngular/1.5.1/textAngular-sanitize.min.js"></script>
+<script src="//cdn.bootcss.com/textAngular/1.5.1/textAngular.min.js"></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js"></script>
+<script src="//cdn.bootcss.com/rangeslider.js/2.2.1/rangeslider.js"></script>
+<script src="//cdn.bootcss.com/angularjs-datepicker/2.1.6/angular-datepicker.min.js"></script>
+<link href="./app.min.css" rel="stylesheet" />
+<style>
+    body {
+        font-family: "Roboto", sans-serif
+    }
+    
+    .w3-bar-block .w3-bar-item {
+        padding: 16px;
+        font-weight: bold
+    }
+</style>
+
+<style type="text/css">
+    .form-style-6 {
+        font: 95% Arial, Helvetica, sans-serif;
+        max-width: 400px;
+        margin: 10px auto;
+        padding: 16px;
+        background: #F7F7F7;
+    }
+    
+    .form-style-6 h1 {
+        background: #43D1AF;
+        padding: 20px 0;
+        font-size: 140%;
+        font-weight: 300;
+        text-align: center;
+        color: #fff;
+        margin: -16px -16px 16px -16px;
+    }
+    
+    .form-style-6 input[type="text"],
+    .form-style-6 input[type="date"],
+    .form-style-6 input[type="datetime"],
+    .form-style-6 input[type="email"],
+    .form-style-6 input[type="number"],
+    .form-style-6 input[type="search"],
+    .form-style-6 input[type="time"],
+    .form-style-6 input[type="url"],
+    .form-style-6 textarea,
+    .form-style-6 select {
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: none;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        background: #fff;
+        margin-bottom: 4%;
+        border: 1px solid #ccc;
+        padding: 3%;
+        color: #555;
+        font: 95% Arial, Helvetica, sans-serif;
+    }
+    
+    .form-style-6 input[type="text"]:focus,
+    .form-style-6 input[type="date"]:focus,
+    .form-style-6 input[type="datetime"]:focus,
+    .form-style-6 input[type="email"]:focus,
+    .form-style-6 input[type="number"]:focus,
+    .form-style-6 input[type="search"]:focus,
+    .form-style-6 input[type="time"]:focus,
+    .form-style-6 input[type="url"]:focus,
+    .form-style-6 textarea:focus,
+    .form-style-6 select:focus {
+        box-shadow: 0 0 5px #43D1AF;
+        padding: 3%;
+        border: 1px solid #43D1AF;
+    }
+    
+    .form-style-6 input[type="submit"],
+    .form-style-6 input[type="button"] {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        padding: 3%;
+        background: #43D1AF;
+        border-bottom: 2px solid #30C29E;
+        border-top-style: none;
+        border-right-style: none;
+        border-left-style: none;
+        color: #fff;
+    }
+    
+    .form-style-6 input[type="submit"]:hover,
+    .form-style-6 input[type="button"]:hover {
+        background: #2EBC99;
+    }
+    
+    .entext {
+        color: #006200;
+    }
+    
+    .coImage {
+        width: 100%;
+        margin: auto;
+        max-width: 600px;
+    }
+</style>
+
+<body>
+
+
+    <header class="w3-container w3-theme w3-padding-64" style="padding-left:32px">
+        <h1 class="w3-xxxlarge w3-padding-16">Experience Free Private Table Tennis Lesson </h1>
+    </header>
+
+
+    <div id="response" class="w3-container w3-sand w3-leftbar">
+    </div>
+
+    <div class="payment-section">
+        <div class="payment-left">
+            <div class="payment-step-2">
+                <p>Pay with</p>
+                <div class="list-group bg-white">
+                    <div class="list-group-item" id="paypalItem">
+
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <img height="30px;" src="./images/paypal.png" style="vertical-align: middle;">
+                    </div>
+                    <div class="list-group-item hide" id="paypalInput">
+                        <!-- paypal -->
+                        <div class="paypal">
+                            <!--  <form name="paypalForm" action="https://www.paypal.com/cgibin/webscr" method="post"> -->
+                            <!-- paypal沙盒支付测试地址 -->
+                            <form id="pay_form" name="paypalForm" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                                <!-- Payment amount-->
+                                <input type="hidden" name="amount" value="{{payment.total_total_session_rate}}">
+                                <!-- 自己的参数 商品条目-->
+                                <input type="hidden" name="item_number" id="item_number" value="{{payment.course_titles}}">
+                                <!-- 表示立即支付-->
+                                <input type="hidden" name="cmd" value="_xclick">
+                                <!-- 商品名称-->
+                                <input type="hidden" name="item_name" id="item_name" value="skillpier">
+                                <!-- 商户订单唯一id 不可重复 -->
+                                <!--
+            <input type="hidden" name="invoice" id="invoice" value="201604291655176">
+            System.currentTimeMillis()
+             -->
+                                <input type="hidden" name="invoice" value="{{id}}">
+                                <!--支付成功后台通知地址-->
+                                <input type="hidden" name="notify_url" id="notify_url" value="https://www.skillpier.com/PaypalNotify">
+                                <!--支付成功返回地址-->
+                                <input type="hidden" name="return" id="return" value="https://www.skillpier.com/">
+                                <input type="hidden" name="lc" value="US">
+                                <!--支付取消返回地址-->
+                                <input type="hidden" name="cancel_return" id="cancel_return" value="https://www.skillpier.com/">
+                                <input type="hidden" name="currency_code" value="USD">
+                                <!--商户邮件-->
+                                <input type="hidden" name="business" value="administrator@skillpier.com">
+                                <input type="image" src="./images/paypal.png" border="0" name="submit" alt="Make payments with PayPal it's st, free and secure!">
+                            </form>
+                        </div>
+                        <div>Click PayPal to complete your purchase</div>
+                    </div>
+                    <div class="list-group-item" ng-click="select_payment('visa')">
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <img height="30px;" src="./images/visa.jpg" style="vertical-align: middle;">
+                    </div>
+                    <div class="list-group-item hide">
+                        <!-- visa pay -->
+                        <form name="visaForm" ng-submit="ajaxForm()" class="visa-form clearfix">
+                            <div class="visa-caret"></div>
+                            <div class="visa-content">
+                                <div class="visa-tip">
+                                    <b>Enter Your Credit Card</b> This card is only used to reserve your room. You may choose
+                                    another form at check-in.
+                                </div>
+                                <div class="clearfix">
+                                    <div class="visa-input">
+                                        <input type="number" placeholder="Card number" required name="visa_card_id" ng-model="input.visa_card_id" maxlength="16"
+                                            ng-class="{'text-danger':visaForm.visa_card_id.$invalid && visaForm.visa_card_id.$dirty}">
+                                    </div>
+                                    <div class="visa-input">
+                                        <input type="text" placeholder="Month" class="month" required name="visa_card_month" ng-model="input.visa_card_month" month-mark>
+                                        <input type="number" placeholder="Year" class="year" required name="visa_card_year" ng-model="input.visa_card_year" year-mark>
+                                    </div>
+                                    <div class="visa-input">
+                                        <input type="number" placeholder="Security code" class="code" required name="visa_card_code" ng-model="input.visa_card_code"
+                                            security-code-mark>
+                                    </div>
+                                </div>
+                                <p></p>
+                                <button type="submit" class="btn btn-primary" ng-disabled="visaForm.$invalid">Confirm</button>
+                                <p></p>
+                                <div>Click Confirm to complete your purchase</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <span class="hover" style="color: blue" ng-click="last_step()"> Back</span>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        $("#paypalItem").click(function () {
+            alert("Handler for .click() called.");
+
+            $('#paypalInput').removeClass('hide');
+        });
+
+        var LocString = String(window.document.location.href);
+        function getQueryStr(str) {
+            var rs = new RegExp("(^|)" + str + "=([^&]*)(&|$)", "gi").exec(LocString), tmp;
+            if (tmp = rs) {
+                return tmp[2];
+            }
+            // parameter cannot be found
+            return "";
+        }
+
+        var name = getQueryStr("name");
+        $("#response").html("Your name:" + name);
+        $("#pay_form").submit(function (event) {
+
+            var iteminfo = $("#firstname1").val() + '#' + $("#lastname1").val();
+            console.log('info = ' + iteminfo);
+
+            $('input[name="item_number"]').val(iteminfo);
+
+
+            var geturl = 'http://www.skillpier.net/sendemailp?firstname=' + $("#firstname1").val() + '&lastname=' + $("#lastname1").val();
+
+            $.get('http://www.skillpier.net/sendemailp?firstname=zackzhu&lastname=112233', function (data) {
+
+                alert("Data Loaded: " + data);
+            });
+
+        });
+
+
+
+
+        $(function () {
+            $("#myform").on("submit", function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: $(this).attr("action"),
+                    type: 'GET',
+                    data: $(this).serialize(),
+
+                    success: function (data) {
+                        $("#message").hide();
+                        $("#response").html("Your information has been successfully submitted!");
+
+                        alert("Your information has been successfully submitted!");
+                    }
+                });
+            });
+        });
+
+
+        $(function () {
+            $("#myform1").on("submit", function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: $(this).attr("action"),
+                    type: 'GET',
+                    data: $(this).serialize(),
+
+                    success: function (data) {
+                        $("#message").hide();
+                        $("#response1").html("Your information has been successfully submitted!");
+
+                        alert("Your information has been successfully submitted!");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
