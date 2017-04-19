@@ -35,6 +35,12 @@
 <script src="//cdn.bootcss.com/rangeslider.js/2.2.1/rangeslider.js"></script>
 <script src="//cdn.bootcss.com/angularjs-datepicker/2.1.6/angular-datepicker.min.js"></script>
 <link href="./app.min.css" rel="stylesheet" />
+<link href="lib/css/account.css" rel="stylesheet">
+<link href="lib/css/animate.css" rel="stylesheet">
+<link href="lib/css/index.css" rel="stylesheet">
+<link href="lib/css/media.css" rel="stylesheet">
+<link href="lib/css/Style.css" rel="stylesheet">
+<link href="lib/css/superslides.css" rel="stylesheet">
 <style>
     body {
         font-family: "Roboto", sans-serif
@@ -160,13 +166,19 @@
                         <img height="30px;" src="./images/paypal.png" style="vertical-align: middle;">
                     </div>
                     <div class="list-group-item hide" id="paypalInput">
+
+                              <p class="clearfix settlement-action settlement-line">
+                    Number of people :
+                
+                <input id="numberp" type="number" min="1" max="999" value="1"/>
+                </p>
                         <!-- paypal -->
                         <div class="paypal">
-                            <!--  <form name="paypalForm" action="https://www.paypal.com/cgibin/webscr" method="post"> -->
+                             <form id="pay_form" name="paypalForm" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post"> 
                             <!-- paypal沙盒支付测试地址 -->
-                            <form id="pay_form" name="paypalForm" action="https://www.paypal.com/cgibin/webscr" method="post">
+                            <!--<form id="pay_form" name="paypalForm" action="https://www.paypal.com/cgibin/webscr" method="post">-->
                                 <!-- Payment amount-->
-                                <input type="hidden" name="amount" value="5">
+                                <input type="hidden" name="amount" value="10">
                                 <!-- 自己的参数 商品条目-->
                                 <input type="hidden" name="item_number" id="item_number" value="pingpong activities">
                                 <!-- 表示立即支付-->
@@ -188,7 +200,7 @@
                                 <input type="hidden" name="cancel_return" id="cancel_return" value="http://www.skillpier.net/">
                                 <input type="hidden" name="currency_code" value="USD">
                                 <!--商户邮件-->
-                                <input type="hidden" name="business" value="administrator@skillpier.com">
+                                <input type="hidden" name="business" value="ivanz@skillpier.com">
                                 <input type="image" src="./images/paypal.png" border="0" name="submit" alt="Make payments with PayPal it's st, free and secure!">
                             </form>
                         </div>
@@ -275,7 +287,7 @@
 
         var name = getQueryStr("name");
         var phone = getQueryStr("phone");
-        $("#response").html("Your name:" + name + " Your phone:" + phone);
+        $("#response").html("Your name:" + name + " Your phone:" + phone +"," +"In order to arrange your schedule, we will charge $10 deposit and return to you when you check in.");
 
         $("#pay_form").submit(function (event) {
 
@@ -283,6 +295,9 @@
             console.log('info = ' + iteminfo);
 
             $('input[name="item_number"]').val(iteminfo);
+
+            var nump = $('#numberp').val() * 10;
+             $('input[name="amount"]').val(nump);
 
         });
     </script>

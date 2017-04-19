@@ -29,6 +29,8 @@ app.use('/skillpier-action_files', express.static(path.join(__dirname + '/skillp
 
 app.use('/app.min.css', express.static(path.join(__dirname + '/app.min.css')))
 app.use('/images', express.static(path.join(__dirname + '/images')))
+
+app.use('/lib', express.static(path.join(__dirname + '/lib')))
 app.get('/', function(req, res) {
     //res.sendfile('./skillpier-action.htm');
     res.sendFile(path.join(__dirname, '/', 'skillpier-pingpong.html'));
